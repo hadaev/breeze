@@ -487,13 +487,21 @@ button {
   background-clip: content-box; }
   .header__top .row {
     height: 44px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    position: relative; }
+  .header__top-right {
+    position: absolute;
+    right: 0; }
 
 .phone {
   font-family: "SegoeUI", sans-serif;
   font-size: 11px;
   color: #444;
-  position: relative; }
+  position: relative;
+  margin: 10px 0; }
+  @media screen and (max-width: 390px) {
+    .phone {
+      visibility: hidden; } }
   .phone:before {
     content: '';
     position: absolute;
@@ -547,6 +555,24 @@ button {
 
 .header__middle {
   padding: 38px 0; }
+  @media screen and (max-width: 915px) {
+    .header__middle .user-cart {
+      width: 100%;
+      max-width: 100%;
+      -webkit-box-flex: 100%;
+          -ms-flex: 100%;
+              flex: 100%; } }
+  @media screen and (max-width: 575px) {
+    .header__middle .user-cart {
+      padding: 20px 15px 0 15px; } }
+  @media screen and (max-width: 767px) {
+    .header__middle form {
+      float: right;
+      width: 100%; } }
+
+@media screen and (max-width: 575px) {
+  .logo {
+    padding: 20px 0; } }
 
 .search form,
 .block-email form {
@@ -576,6 +602,9 @@ button {
   font-weight: 400;
   padding-right: 17px;
   max-width: 376px; }
+  @media screen and (max-width: 485px) {
+    .auth {
+      padding-right: 0; } }
   .auth li {
     position: relative; }
     .auth li:not(:last-child):after {
@@ -604,6 +633,9 @@ button {
   font-size: 11px;
   font-weight: 400;
   position: relative; }
+  @media screen and (max-width: 485px) {
+    .cart {
+      width: 40%; } }
   .cart > a {
     color: inherit;
     background-color: #f1f3f5;
@@ -614,18 +646,23 @@ button {
     display: inline-block;
     width: 105px;
     padding-left: 35px; }
-  .cart:hover .cart__show {
-    display: block; }
-    .cart:hover .cart__show:before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: 0;
-      height: 10px;
-      width: 100%; }
-  .cart:hover > a {
-    background: #59b7c2 url("../images/cart-white.png") 10px center no-repeat;
-    color: #fff; }
+    @media screen and (max-width: 485px) {
+      .cart > a {
+        width: 100%;
+        margin: 10px 0; } }
+  @media screen and (min-width: 426px) {
+    .cart:hover .cart__show {
+      display: block; }
+      .cart:hover .cart__show:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        height: 10px;
+        width: 100%; }
+    .cart:hover > a {
+      background: #59b7c2 url("../images/cart-white.png") 10px center no-repeat;
+      color: #fff; } }
   .cart .cart__show {
     display: none;
     position: absolute;
@@ -716,44 +753,47 @@ button {
   .menu li {
     position: relative;
     border: 1px solid transparent; }
-    .menu li:hover .submenu {
-      display: block; }
-      .menu li:hover .submenu:before {
-        content: "";
+    @media screen and (min-width: 661px) {
+      .menu li:hover .submenu {
+        display: block; }
+        .menu li:hover .submenu:before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          height: 10px;
+          width: 100%; } }
+    @media screen and (min-width: 661px) {
+      .menu li .submenu {
+        display: none;
         position: absolute;
-        top: -10px;
+        top: 51px;
         left: 0;
-        height: 10px;
-        width: 100%; }
-    .menu li .submenu {
-      display: none;
-      position: absolute;
-      top: 51px;
-      left: 0;
-      background-color: #fff;
-      color: #777;
-      font-family: BitterRegular, sans-serif;
-      font-size: 13px;
-      width: 215px;
-      border: 1px solid #e0e0e0;
-      border-radius: 2px;
-      -webkit-box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
-              box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
-      z-index: 2; }
-      .menu li .submenu li {
-        border: none; }
-      .menu li .submenu a {
-        width: 100%;
-        padding: 15px 20px;
-        border-bottom: 1px solid #e0e0e0;
-        text-transform: none;
-        -webkit-transition: all 0.3s linear;
-        transition: all 0.3s linear; }
-        .menu li .submenu a:hover {
-          background-color: #f5f7f9; }
-    .menu li:hover {
-      background-color: #d5e4f1;
-      border: 1px solid #c3d7e9; }
+        background-color: #fff;
+        color: #777;
+        font-family: BitterRegular, sans-serif;
+        font-size: 13px;
+        width: 215px;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+        -webkit-box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
+                box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
+        z-index: 2; }
+        .menu li .submenu li {
+          border: none; }
+        .menu li .submenu a {
+          width: 100%;
+          padding: 15px 20px;
+          border-bottom: 1px solid #e0e0e0;
+          text-transform: none;
+          -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+          .menu li .submenu a:hover {
+            background-color: #f5f7f9; } }
+    @media screen and (max-width: 661px) {
+      .menu li:hover {
+        background-color: #d5e4f1;
+        border: 1px solid #c3d7e9; } }
     .menu li.active {
       opacity: 0.8;
       color: #fff;
@@ -765,10 +805,15 @@ button {
     display: inline-block; }
 
 .menu-icon {
-  display: none !important; }
-  @media screen and (max-width: 768px) {
+  display: none; }
+  @media screen and (max-width: 660px) {
     .menu-icon {
-      display: inline-block; } }
+      display: inline-block;
+      position: absolute;
+      top: -30px;
+      right: 15px;
+      -webkit-transform: rotateZ(90deg);
+              transform: rotateZ(90deg); } }
   .menu-icon:after {
     content: "|||";
     padding: 20px;
@@ -780,7 +825,7 @@ button {
       position: relative;
       z-index: 2; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 660px) {
   .menu {
     width: 0;
     max-width: 500px;
@@ -789,6 +834,7 @@ button {
     top: 0;
     right: 0;
     overflow: hidden;
+    z-index: 3;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear; }
     .menu ul {
@@ -802,6 +848,9 @@ button {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+    .menu li {
+      width: 100%;
+      text-align: center; }
     .active .menu {
       width: 100%; } }
 
@@ -841,6 +890,10 @@ button {
     .footer__top .phone-f {
       background-image: url("../images/phone-s.png"); }
 
+@media screen and (max-width: 567px) {
+  .footer__bottom .col-md-6 {
+    width: 50%; } }
+
 .copyright {
   padding: 22px 0;
   color: #999;
@@ -877,10 +930,24 @@ button {
     position: absolute;
     top: 70px;
     left: 50.3%; }
+    @media screen and (max-width: 767px) {
+      .slide__description {
+        top: 10%;
+        left: 40.3%; } }
+    @media screen and (max-width: 540px) {
+      .slide__description ul {
+        display: none; } }
     .slide__description h1 {
       background-color: rgba(255, 255, 255, 0.7);
       padding: 0 10px 5px 10px;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      font-size: 18px; }
+      @media (min-width: 320px) {
+        .slide__description h1 {
+          font-size: calc( 0.02594 * 100vw + 9.70029px); } }
+      @media (min-width: 1014px) {
+        .slide__description h1 {
+          font-size: 36px; } }
     .slide__description span {
       color: #222;
       font-size: 16px;
@@ -952,7 +1019,21 @@ button {
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
-  padding: 0px 16px; }
+  padding: 0px 16px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    .banners__block {
+      height: auto;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding-top: 15px;
+      text-align: center; }
+      .banners__block > * {
+        width: 100%; } }
   .banners__block .block-text {
     line-height: 26px;
     padding: 18px 0 0 18px; }
@@ -1068,6 +1149,9 @@ button {
 
 .products {
   padding-top: 77px; }
+  @media screen and (max-width: 424px) {
+    .products {
+      padding-top: 0; } }
 
 .info {
   padding-top: 70px; }
@@ -1129,6 +1213,13 @@ button {
   font-size: 16px;
   font-weight: 300;
   font-family: BitterRegular, sans-serif; }
+  @media screen and (max-width: 540px) {
+    .modal-window {
+      top: 100px;
+      width: calc(100% - 30px);
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
 
 .modal-contents {
   text-align: left;

@@ -42,6 +42,13 @@
 		}
 	}
 }
+.footer__bottom{
+	.col-md-6{
+		@include max-w(567px){
+			width: 50%;
+		}
+	}
+}
 .copyright{
 	padding: 22px 0;
 	color: #999;

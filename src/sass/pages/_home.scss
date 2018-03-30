@@ -10,10 +10,20 @@
     position: absolute;
     top: 70px;
     left: 50.3%;
+    @include max-w(767px){
+      top: 10%;
+      left: 40.3%;
+    }
+    ul{
+      @include max-w(540px){
+        display: none;
+      }
+    }
     h1{
       background-color: rgba(255, 255, 255, .7);
       padding: 0 10px 5px 10px;
       margin-bottom: 18px;
+      @include fluid-font(18px, 36px, 320px, 1014px);
     }
     span{
       color: #222;
@@ -100,6 +110,17 @@
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     padding: 0px 16px;
+    flex-wrap: nowrap;
+    @include max-min-w(991px, 768px){
+      height: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 15px;
+      text-align: center;
+      &>*{
+        width: 100%;
+      }
+    }
     .block-text{
       line-height: 26px;
       padding: 18px 0 0 18px;
@@ -237,10 +258,14 @@
 }
 .products{
   padding-top: 77px;
+  @include max-w(424px){
+    padding-top: 0;
+  }
 }
 
 .info{
   padding-top: 70px;
+
   h3{
     line-height: 28px;
     margin-bottom: 15px;
@@ -309,6 +334,13 @@
   font-size:16px;
   font-weight:300;
   font-family: BitterRegular, sans-serif;
+  @include max-w(540px){
+    top: 100px;
+    width: calc(100% - 30px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 .modal-contents {
   text-align:left;

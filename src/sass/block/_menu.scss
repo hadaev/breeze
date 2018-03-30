@@ -1,7 +1,11 @@
 .menu-icon{
-  display: none!important;
+  display: none;
   @include max-w($tablet){
     display: inline-block;
+    position: absolute;
+    top: -30px;
+    right: 15px;
+    transform: rotateZ(90deg);
   }
   &:after{
     content: "|||";
@@ -24,9 +28,14 @@
     top: 0;
     right: 0;
     overflow: hidden;
+    z-index: 3;
     @include transition;
     ul{
       @include flex-reset-column();
+    }
+    li{
+      width: 100%;
+      text-align: center;
     }
     .active &{
       width: 100%;

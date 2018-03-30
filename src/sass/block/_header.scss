@@ -16,6 +16,11 @@
   .row{
     height: 44px;
     padding-top: 10px;
+    position: relative;
+  }
+  &-right{
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -24,6 +29,10 @@
   font-size: 11px;
   color: $light-grey;
   position: relative;
+  margin: 10px 0;
+  @include max-w(390px){
+    visibility: hidden;
+  }
   &:before{
     content: '';
     position: absolute;
@@ -84,6 +93,30 @@
 
 .header__middle {
   padding: 38px 0;
+  @include max-w(660px){
+    //padding-bottom: 0;
+  }
+  .user-cart{
+    @include max-w(915px){
+      width: 100%;
+      max-width: 100%;
+      flex: 100%;
+    }
+    @include max-w(575px){
+      padding: 20px 15px 0 15px;
+    }
+  }
+  form{
+    @include max-w(767px){
+      float: right;
+      width: 100%;
+    }
+  }
+}
+.logo{
+  @include max-w(575px){
+    padding: 20px 0;
+  }
 }
 .search,
 .block-email{
@@ -114,7 +147,9 @@
   font-weight: 400;
   padding-right: 17px;
   max-width: 376px;
-  //width: calc(100% - 96px);
+  @include max-w(485px){
+    padding-right: 0;
+  }
   li{
     position: relative;
     &:not(:last-child):after{
@@ -146,6 +181,9 @@
   font-size: 11px;
   font-weight: 400;
   position: relative;
+  @include max-w(485px){
+    width: 40%;
+  }
   &>a{
     color: inherit;
     background-color: #f1f3f5;
@@ -156,23 +194,28 @@
     display: inline-block;
     width: 105px;
     padding-left: 35px;
-
-  }
-  &:hover{
-    .cart__show{
-      display: block;
-      &:before{
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: 0;
-        height: 10px;
-        width: 100%;
-      }
+    @include max-w(485px){
+      width: 100%;
+      margin: 10px 0;
     }
-    &>a{
-      background: #59b7c2 url("../images/cart-white.png") 10px center no-repeat;
-      color: $white;
+  }
+  @include min-w(426px){
+    &:hover{
+      .cart__show{
+        display: block;
+        &:before{
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          height: 10px;
+          width: 100%;
+        }
+      }
+      &>a{
+        background: #59b7c2 url("../images/cart-white.png") 10px center no-repeat;
+        color: $white;
+      }
     }
   }
   .cart__show{
@@ -281,52 +324,60 @@
   background-color: #f5f7f9;
   li{
     position: relative;
-    &:hover{
-      .submenu{
-        display: block;
-        &:before{
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: 0;
-          height: 10px;
-          width: 100%;
+    @include min-w(661px){
+      &:hover{
+        .submenu{
+          display: block;
+          &:before{
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            height: 10px;
+            width: 100%;
+          }
         }
       }
     }
     .submenu{
-      display: none;
-      position: absolute;
-      top: 51px;
-      left: 0;
-      background-color: $white;
-      color: #777;
-      font-family: BitterRegular, sans-serif;
-      font-size: 13px;
-      width: 215px;
-      border: 1px solid #e0e0e0;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
-      z-index: 2;
-      li{
-        border: none;
-      }
-      a{
-        width: 100%;
-        padding: 15px 20px;
-        border-bottom: 1px solid #e0e0e0;
-        text-transform: none;
-        @include transition();
-        &:hover{
-          background-color: #f5f7f9;
+      @include min-w(661px){
+        display: none;
+        position: absolute;
+        top: 51px;
+        left: 0;
+        background-color: $white;
+        color: #777;
+        font-family: BitterRegular, sans-serif;
+        font-size: 13px;
+        width: 215px;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(132, 132, 132, 0.35);
+        z-index: 2;
+        li{
+          border: none;
         }
+        a{
+          width: 100%;
+          padding: 15px 20px;
+          border-bottom: 1px solid #e0e0e0;
+          text-transform: none;
+          @include transition();
+          &:hover{
+            background-color: #f5f7f9;
+          }
 
+        }
       }
+
     }
     border: 1px solid transparent;
     &:hover{
-      background-color: #d5e4f1;
-      border: 1px solid #c3d7e9;
+      @include max-w(661px){
+        background-color: #d5e4f1;
+        border: 1px solid #c3d7e9;
+      }
+
     }
     &.active{
       opacity: 0.8;
