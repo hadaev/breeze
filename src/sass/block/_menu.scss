@@ -1,0 +1,36 @@
+.menu-icon{
+  display: none!important;
+  @include max-w($tablet){
+    display: inline-block;
+  }
+  &:after{
+    content: "|||";
+    padding: 20px;
+    color: $black;
+    @include transition();
+    .active &{
+      content: "X";
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+@include max-w($tablet){
+  .menu{
+    width: 0;
+    max-width: 500px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    @include transition;
+    ul{
+      @include flex-reset-column();
+    }
+    .active &{
+      width: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+// Все элементы формы
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea,
+select {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  background: none;
+  outline: 0 none;
+  border: none;
+  color: $grey;
+  background-color: #fff;
+  margin: 0;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+}

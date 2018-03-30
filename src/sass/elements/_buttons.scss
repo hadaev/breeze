@@ -1,0 +1,27 @@
+// Кнопки
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  background: none;
+  outline: 0 none;
+  border: 0 none;
+  color: #fefefe;
+  font-family: "SegoeUI", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  height: 35px;
+  background-color: #59b7c2;
+  border-radius: 2px;
+  text-align: center;
+  @include transition();
+  &:hover{
+    background-color: #444;
+  }
+  &:focus{
+    box-shadow: none;
+  }
+}
+

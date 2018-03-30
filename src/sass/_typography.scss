@@ -1,0 +1,125 @@
+//  Подключения шрифтов
+@font-face {
+  font-family: "BitterRegular";
+  src: url("../fonts/BitterRegular/BitterRegular.eot");
+  src: url("../fonts/BitterRegular/BitterRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/BitterRegular/BitterRegular.woff") format("woff"),
+  url("../fonts/BitterRegular/BitterRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BitterBold";
+  src: url("../fonts/BitterBold/BitterBold.eot");
+  src: url("../fonts/BitterBold/BitterBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/BitterBold/BitterBold.woff") format("woff"),
+  url("../fonts/BitterBold/BitterBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BitterItalic";
+  src: url("../fonts/BitterItalic/BitterItalic.eot");
+  src: url("../fonts/BitterItalic/BitterItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/BitterItalic/BitterItalic.woff") format("woff"),
+  url("../fonts/BitterItalic/BitterItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BitterBoldItalic";
+  src: url("../fonts/BitterBoldItalic/BitterBoldItalic.eot");
+  src: url("../fonts/BitterBoldItalic/BitterBoldItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/BitterBoldItalic/BitterBoldItalic.woff") format("woff"),
+  url("../fonts/BitterBoldItalic/BitterBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+// font-family: 'Roboto';
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  src:  local('Roboto'), local('Roboto-Regular');
+  src:  url('../fonts/Roboto-Regular.eot');
+  src:  url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+
+// font-family: 'Roboto';
+// font-weight: 700;
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src:  local('Roboto'), local('Roboto-Bold');
+  src:  url('../fonts/Roboto-Bold.eot');
+  src:  url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+}
+@font-face {
+  font-family: 'CookieRegular';
+  src: url('../fonts/Cookie-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Cookie-Regular.woff') format('woff'),
+  url('../fonts/Cookie-Regular.ttf')  format('truetype'),
+  url('../fonts/Cookie-Regular.svg#Cookie-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MinionProRegular';
+  src: url('../fonts/MinionPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MinionPro-Regular.otf')  format('opentype'),
+  url('../fonts/MinionPro-Regular.woff') format('woff'),
+  url('../fonts/MinionPro-Regular.ttf')  format('truetype'),
+  url('../fonts/MinionPro-Regular.svg#MinionPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SegoeUI.woff') format('woff'),
+  url('../fonts/SegoeUI.ttf')  format('truetype'),
+  url('../fonts/SegoeUI.svg#SegoeUI') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Заголовки
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family;
+}
+
+h1 {
+  color: #222;
+  font-family: BitterRegular, sans-serif;
+  font-size: 36px;
+}
+
+h2 {
+  color: #444;
+  font-family: BitterRegular, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  color: #444;
+  font-family: BitterRegular, sans-serif;
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}

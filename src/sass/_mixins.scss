@@ -1,0 +1,82 @@
+//  Миксины
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.clearlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+// .list{ color:red; @extend .clearlist;} ...
+
+@mixin absolute-center {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+// Animation elements
+
+// duration продолжительность анимации
+// timing эффект перехода
+// delay задержка перед запуском
+
+@mixin transition($property: all, $duration: .3s, $timing: linear){
+  transition: $property $duration $timing;
+}
+
+// Media Queries Min Width
+
+@mixin min-w($width) {
+  @media screen and (min-width: $width) { @content; }
+}
+
+// Media Queries Max Width
+
+@mixin max-w($width) {
+  @media screen and (max-width: $width) { @content; }
+}
+
+// Media Queries Max Min Width
+
+@mixin max-min-w($max-width, $min-width) {
+  @media screen and (max-width: $max-width) and (min-width: $min-width) { @content; }
+}
+
+// Fluid font size
+// $f-min - min font size
+// $f-max - max font size
+// $w-min - min window width
+// $w-max - max window width
+// $fallback - default font size for old browsers support
+// $units - measure units (e.x. px, em, rem, vw)
+@mixin fluid-font($f-min, $f-max, $w-min, $w-max, $fallback: false, $units: px) {
+
+  font-size: $f-min;
+
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units);
+  }
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
+}
+
+//reset column in mobile
+@mixin flex-reset-column($align-items: center){
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: $align-items;
+}
